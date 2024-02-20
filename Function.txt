@@ -1,0 +1,28 @@
+PL/SQL Function-
+
+The PL/SQL Function is very similar to PL/SQL Procedure. 
+The main difference between procedure and a function is, a function must always return a value,
+ and on the other hand a procedure may or may not return a value.
+
+Example 1 :
+
+1)create a function to add two number -
+
+ create or replace function "ADDER"(num1 in number,num2 in number)
+return number
+is 
+num3 number(5);
+begin
+    num3 := num1+num2;
+    return num3;
+end "ADDER";
+
+
+2)Call the above function -
+ declare
+ num3 number(5);
+ begin
+ num3 :=adder(10,20);
+ dbms_output.put_line('Result :' || num3);
+
+ end;
